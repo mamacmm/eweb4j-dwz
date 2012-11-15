@@ -5,8 +5,8 @@
 		<reload>0</reload>
 		<debug>1</debug>
 		<locales>
-	      <locale language="zh" country="CN"/>
-	    </locales>
+			<locale language="zh" country="CN"/>
+		</locales>
 		<properties>
 			<file id="DWZConstant" path="dwz/conf/dwz.properties" global="false" />
 			<file id="MenuConstant" path="dwz/conf/menu.properties" global="false" />
@@ -15,22 +15,23 @@
 		</properties>
 		<ioc>
 			<open>0</open>
-	        <logs>
-		    	<log console="0" level="info" file="logs/ioc.log" size="5"/>
-		    </logs>
+			<logs>
+				<log console="1" level="info" file="logs/logs.log" size="5"/>
+			</logs>
 			<iocXmlFiles>
-				<path>dwz/ioc/dwz-ioc.xml</path>
+				<path></path>
 			</iocXmlFiles>
 		</ioc>
 		<orm>
 			<open>1</open>
 			<logs>
-		    	<log console="0" level="info" file="logs/orm.log" size="5"/>
-		   	</logs>
+				<log console="1" level="info" file="logs/logs.log" size="5"/>
+			</logs>
+			<ddl generate="true" run="false" ds="myDBInfo"/>
 			<dataSource>com.mchange.v2.c3p0.ComboPooledDataSource</dataSource>
 			<scanPojoPackage>
-				<path>test.po</path>
-				<path>org.eweb4j.component.dwz.menu</path>
+				<path>AP:${RootPath}/target/classes</path>
+				<path>.</path>
 			</scanPojoPackage>
 			<ormXmlFiles>
 				<path></path>
@@ -40,15 +41,20 @@
 			</dbInfoXmlFiles>
 		</orm>
 		<mvc>
-			<open>0</open>
-	        <logs>
-		    	<log console="1" level="info" file="logs/mvc.log" size="5"/>
-		    </logs>
-		    <upload tmp="${RootPath}/WEB-INF/tmp" maxMemorySize="20M" maxRequestSize="512K" />
+			<open>true</open>
+			<logs>
+				<log console="1" level="info" file="logs/logs.log" size="5"/>
+			</logs>
+			<upload tmp="${RootPath}/WEB-INF/tmp" maxMemorySize="4M" maxRequestSize="4M"/>
 			<scanActionPackage>
-				<path>org.eweb4j.component.dwz.menu</path>
+				<path>.</path>
 			</scanActionPackage>
-			<actionXmlFiles />
+			<scanInterceptorPackage>
+				<path>.</path>
+			</scanInterceptorPackage>
+			<actionXmlFiles>
+				<path></path>
+			</actionXmlFiles>
 			<interXmlFiles>
 				<path></path>
 			</interXmlFiles>

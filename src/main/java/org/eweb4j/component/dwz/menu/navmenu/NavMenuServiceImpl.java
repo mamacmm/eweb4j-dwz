@@ -120,9 +120,7 @@ public class NavMenuServiceImpl implements NavMenuService {
 		return navMenu;
 	}
 
-	@Override
-	public NavMenu createDefaultNavMenu(String navMenuName)
-			throws MenuException {
+	public NavMenu createDefaultNavMenu(String navMenuName) throws MenuException {
 		if (navMenuName == null || navMenuName.trim().length() == 0)
 			navMenuName = NavMenuCons.DEFAULT_NAV_MENU_NAME();
 
@@ -139,7 +137,6 @@ public class NavMenuServiceImpl implements NavMenuService {
 		return navMenu;
 	}
 
-	@Override
 	public List<NavMenu> findAllOrderBy(String orderField, int orderType) throws MenuException {
 		return navMenuDAO.selectAllOrderBy(orderField, orderType);
 	}

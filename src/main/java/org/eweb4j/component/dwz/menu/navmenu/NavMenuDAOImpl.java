@@ -154,16 +154,13 @@ public class NavMenuDAOImpl implements NavMenuDAO {
 		return count;
 	}
 
-	@Override
 	public long insert(String[] fields, Object[] values) throws MenuException {
 		dao.clear();
 
 		return dao.insert(fields).values(values).execute();
 	}
 
-	@Override
-	public List<NavMenu> selectAllOrderBy(String orderField, int orderType)
-			throws MenuException {
+	public List<NavMenu> selectAllOrderBy(String orderField, int orderType) throws MenuException {
 		return this.selectDAO.selectAll(NavMenu.class, orderField, orderType);
 	}
 

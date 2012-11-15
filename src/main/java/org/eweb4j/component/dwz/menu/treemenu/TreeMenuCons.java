@@ -3,7 +3,7 @@ package org.eweb4j.component.dwz.menu.treemenu;
 import java.util.Map;
 
 import org.eweb4j.cache.Props;
-import org.eweb4j.config.ConfigConstant;
+import org.eweb4j.mvc.config.MVCConfigConstant;
 import org.eweb4j.mvc.view.CallBackJson;
 import org.eweb4j.util.RegexList;
 
@@ -22,7 +22,7 @@ public class TreeMenuCons {
 	public static String DWZ_SUCCESS_JSON_RELOAD_NAVTAB() {
 		String rel = map.get("SHOW_LIST_REL");
 		String path = map.get("SHOW_LIST_PATH");
-		path = ConfigConstant.BASE_URL + path;
+		path = MVCConfigConstant.BASE_URL + path;
 		String title = map.get("SHOW_LIST_TITLE");
 		return new CallBackJson("200", "操作成功", rel, path, "reloadTab", title)
 				.toString();
@@ -31,7 +31,7 @@ public class TreeMenuCons {
 	public static String DWZ_SUCCESS_JSON_CLOSE_CURRENT() {
 		String rel = map.get("SHOW_LIST_REL");
 		String path = map.get("SHOW_LIST_PATH");
-		path = ConfigConstant.BASE_URL + path;
+		path = MVCConfigConstant.BASE_URL + path;
 		String title = map.get("SHOW_LIST_TITLE");
 		return new CallBackJson("200", "操作成功", rel, path, "closeCurrent", title)
 				.toString();

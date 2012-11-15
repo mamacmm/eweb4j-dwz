@@ -294,7 +294,6 @@ public class TreeMenuServiceImpl implements TreeMenuService {
 		return this.treeMenuDAO.getChildrenOrderByRankASC(pid);
 	}
 
-	@Override
 	public NavMenu findNavMenuByTreeMenuId(Long treemenuId) throws Exception {
 		TreeMenu treeMenu = new TreeMenu();
 		treeMenu.setTreeMenuId(treemenuId);

@@ -2,7 +2,6 @@ package org.eweb4j.component.dwz.view;
 
 import java.lang.reflect.Method;
 
-import org.eweb4j.config.ConfigConstant;
 import org.eweb4j.util.ReflectUtil;
 
 /**
@@ -128,7 +127,7 @@ public class ATag {
 		if (href == null)
 			return null;
 		
-		return ConfigConstant.BASE_URL + href;
+		return href;
 	}
 
 	public void setHref(String href) {

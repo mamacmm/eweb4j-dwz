@@ -3,7 +3,7 @@ package org.eweb4j.component.dwz.menu.navmenu;
 import java.util.Map;
 
 import org.eweb4j.cache.Props;
-import org.eweb4j.config.ConfigConstant;
+import org.eweb4j.mvc.config.MVCConfigConstant;
 import org.eweb4j.mvc.view.CallBackJson;
 
 public class NavMenuCons {
@@ -22,18 +22,16 @@ public class NavMenuCons {
 		String rel = map.get("SHOW_LIST_REL");
 		String path = map.get("SHOW_LIST_PATH");
 		String title = map.get("SHOW_LIST_TITLE");
-		path = ConfigConstant.BASE_URL + path;
-		return new CallBackJson("200", "操作成功", rel, path, "reloadTab", title)
-				.toString();
+		path = MVCConfigConstant.BASE_URL + path;
+		return new CallBackJson("200", "操作成功", rel, path, "reloadTab", title).toString();
 	}
 
 	public static String DWZ_SUCCESS_JSON_CLOSE_CURRENT() {
 		String rel = map.get("SHOW_LIST_REL");
 		String path = map.get("SHOW_LIST_PATH");
-		path = ConfigConstant.BASE_URL + path;
+		path = MVCConfigConstant.BASE_URL + path;
 		String title = map.get("SHOW_LIST_TITLE");
-		return new CallBackJson("200", "操作成功", rel, path, "closeCurrent", title)
-				.toString();
+		return new CallBackJson("200", "操作成功", rel, path, "closeCurrent", title).toString();
 	}
 
 	public static String DEFAULT_NAV_MENU_NAME() {

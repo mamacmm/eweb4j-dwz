@@ -250,19 +250,16 @@ public class TreeMenuDAOImpl implements TreeMenuDAO {
 		return pojos;
 	}
 
-	@Override
 	public long insert(String[] fields, Object[] values) throws MenuException {
 		this.dao.clear();
 		return this.dao.insert(fields).values(values).execute();
 	}
 
-	@Override
 	public void update(String[] fields, Object[] values) throws MenuException {
 		this.dao.clear();
 		this.dao.update().set(fields, values).execute();
 	}
 
-	@Override
 	public void cascadeSelectNavMenu(TreeMenu treeMenu) throws MenuException {
 		this.cascadeDAO.select(treeMenu, "navMenu");
 	}
