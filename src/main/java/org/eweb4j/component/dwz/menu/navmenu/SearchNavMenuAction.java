@@ -20,6 +20,7 @@ public class SearchNavMenuAction extends NavMenuBaseAction {
 		try {
 			model.put("listPage", service.getSearchResult(keyword, pageNum, numPerPage));
 		} catch (MenuException e) {
+			e.printStackTrace();
 			return dwz.getFailedJson(e.getMessage()).toString();
 		}
 
