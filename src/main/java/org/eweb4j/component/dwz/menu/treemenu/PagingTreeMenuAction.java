@@ -9,6 +9,7 @@ import javax.ws.rs.Path;
 import org.eweb4j.component.dwz.menu.MenuException;
 import org.eweb4j.mvc.view.ListPage;
 
+@SuppressWarnings("all")
 @Path("${TreeMenuConstant.MODEL_NAME}")
 public class PagingTreeMenuAction extends TreeMenuBaseAction {
 

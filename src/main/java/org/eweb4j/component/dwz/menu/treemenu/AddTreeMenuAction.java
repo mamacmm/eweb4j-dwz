@@ -10,7 +10,7 @@ import javax.ws.rs.QueryParam;
 import org.eweb4j.component.dwz.menu.MenuException;
 import org.eweb4j.mvc.action.annotation.ShowValMess;
 
-
+@SuppressWarnings("all")
 @Path("${TreeMenuConstant.MODEL_NAME}")
 public class AddTreeMenuAction extends TreeMenuBaseAction {
 	@GET

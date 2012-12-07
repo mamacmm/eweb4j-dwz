@@ -5,8 +5,8 @@
 		<dataBaseType>MYSQL</dataBaseType>
 		<property key="driverClass" value="com.mysql.jdbc.Driver" />
 		<property key="jdbcUrl" value="jdbc:mysql://localhost:3306/petstore_db" />
-		<property key="user" value="root" />
-		<property key="password" value="root" />
+		<property key="user" value="admin" />
+		<property key="password" value="admin" />
 		<property key="initialPoolSize" value="5" />
 		<property key="maxPoolSize" value="50" />
 		<property key="minPoolSize" value="1" />

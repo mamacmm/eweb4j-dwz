@@ -9,6 +9,7 @@ import javax.ws.rs.Path;
 import org.eweb4j.component.dwz.menu.MenuException;
 import org.eweb4j.mvc.action.annotation.Result;
 
+@SuppressWarnings("all")
 @Path("${NavMenuConstant.MODEL_NAME}")
 public class SearchNavMenuAction extends NavMenuBaseAction {
 

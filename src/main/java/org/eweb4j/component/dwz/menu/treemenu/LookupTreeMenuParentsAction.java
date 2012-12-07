@@ -8,6 +8,7 @@ import javax.ws.rs.Path;
 
 import org.eweb4j.component.dwz.menu.MenuException;
 
+@SuppressWarnings("all")
 @Path("${TreeMenuConstant.MODEL_NAME}")
 public class LookupTreeMenuParentsAction extends TreeMenuBaseAction {
 

@@ -6,6 +6,7 @@ import javax.ws.rs.GET;
 import javax.ws.rs.POST;
 import javax.ws.rs.Path;
 
+@SuppressWarnings("all")
 @Path("${TreeMenuConstant.MODEL_NAME}")
 public class SearchTreeMenuAction extends TreeMenuBaseAction {
 
